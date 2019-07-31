@@ -37,10 +37,14 @@ public class Spawner : MonoBehaviour
                     for (int i = 0; i < randomRoom.waypoints.Length; i++)
                     {
                         //add the waypoints to the patrol list
+                        blake.GetComponent<BlakeAIController>().patrolPoints.Add(randomRoom.waypoints[i]);
+                        
 
                     }
 
                     //sets the current point point index
+                    blake.GetComponent<BlakeAIController>().currentPatrolPoint =
+                        blake.GetComponent<BlakeAIController>().patrolPoints[0];
 
                     data.gm.Enemies.Add(enemies[0]); 
                 }
@@ -62,6 +66,7 @@ public class Spawner : MonoBehaviour
                     for (int i = 0; i < randomRoom.waypoints.Length; i++)
                     {
                         //add the waypoints to the patrol list
+                        //isaac.GetComponent<BlakeAIController>().patrolPoints.Add(randomRoom.waypoints[i]);
 
                     }
 
@@ -85,6 +90,7 @@ public class Spawner : MonoBehaviour
                     for (int i = 0; i < randomRoom.waypoints.Length; i++)
                     {
                         //add the waypoints to the patrol list
+                        //patricia.GetComponent<BlakeAIController>().patrolPoints.Add(randomRoom.waypoints[i]);
 
                     }
 
@@ -109,6 +115,7 @@ public class Spawner : MonoBehaviour
                     for (int i = 0; i < randomRoom.waypoints.Length; i++)
                     {
                         //add the waypoints to the patrol list
+                        //chris.GetComponent<BlakeAIController>().patrolPoints.Add(randomRoom.waypoints[i]);
 
                     }
 

@@ -23,4 +23,12 @@ public class PawnMover : MonoBehaviour
         data.tf.Rotate(new Vector3(0f, direction * data.rotateSpeed * Time.deltaTime, 0f));
     }
 
+    public void RotateTowards(Vector3 direction)
+    {
+        Quaternion rotateDirection = Quaternion.LookRotation(direction, Vector3.up);
+        rotateDirection.x = 0;
+        rotateDirection.z = 0;
+        data.tf.rotation = Quaternion.RotateTowards(data.tf.rotation, rotateDirection, data.rotateSpeed * Time.deltaTime);
+    }
+
 }

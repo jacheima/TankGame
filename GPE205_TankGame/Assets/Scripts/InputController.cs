@@ -42,6 +42,14 @@ public class InputController : MonoBehaviour
             data.mover.Rotate(-data.rotateSpeed * Time.deltaTime);
         }
 
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (Time.time > data.shootTime + data.bulletCoolDown)
+            {
+                GameObject bullet = Instantiate(data.bullet, data.bulletSpawn.transform.position, data.bulletSpawn.transform.rotation);
+                data.shootTime = Time.deltaTime;
+            }
+        }
 
         data.mover.Move(directionToMove);
 

@@ -10,7 +10,20 @@ public class Room : MonoBehaviour
     public GameObject wallWest;
 
     public Transform[] waypoints;
-    public Transform spawnPoint;
     public Transform powerUpSpawan;
 
+    public int PowerUpSpawnIndex;
+    public int EnemySpawnIndex;
+
+
+    void Start()
+    {
+        PowerUpSpawnIndex = Random.Range(0, waypoints.Length);
+        EnemySpawnIndex = Random.Range(0, waypoints.Length);
+
+        if (PowerUpSpawnIndex == EnemySpawnIndex)
+        {
+            EnemySpawnIndex = Random.Range(0, waypoints.Length);
+        }
+    }
 }
