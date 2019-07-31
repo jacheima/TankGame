@@ -11,11 +11,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3355527844164625639}
   - component: {fileID: 3944001694503395391}
-  - component: {fileID: 4398265155395905473}
-  - component: {fileID: 9101453032187737249}
-  - component: {fileID: 6358941979316851491}
-  - component: {fileID: 620411392062414801}
-  - component: {fileID: 1902673830434743968}
   m_Layer: 0
   m_Name: Chris
   m_TagString: Untagged
@@ -75,93 +70,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &4398265155395905473
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 1840584377973143111, guid: 3ac4a7b28a447e8468753e3a3c1bb04e,
-    type: 3}
-  m_PrefabInstance: {fileID: 5750769806496590371}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 17704254428616893}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e747ab65d2d4da64db085d6868f41398, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &9101453032187737249
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 1431432568466339412, guid: 3ac4a7b28a447e8468753e3a3c1bb04e,
-    type: 3}
-  m_PrefabInstance: {fileID: 5750769806496590371}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 17704254428616893}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0f0d73d210044242887557ca8a11849, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mover: {fileID: 6358941979316851491}
-  cc: {fileID: 0}
-  map: {fileID: 0}
-  aic: {fileID: 0}
-  bm: {fileID: 0}
-  scatterWaypoint: {fileID: 0}
-  bullet: {fileID: 8542370833588064946, guid: f1212dd63f9305449a6a84390490e0be, type: 3}
-  bulletSpawn: {fileID: 3619292928662006947}
-  tf: {fileID: 3355527844164625639}
-  forwardSpeed: 10
-  rotateSpeed: 10
-  bulletCoolDown: 2
-  shootTime: 0
-  gm: {fileID: 0}
---- !u!114 &6358941979316851491
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 187886175447078305, guid: 3ac4a7b28a447e8468753e3a3c1bb04e,
-    type: 3}
-  m_PrefabInstance: {fileID: 5750769806496590371}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 17704254428616893}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08a2286327a5c8948b012a0c4a2366fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  data: {fileID: 9101453032187737249}
---- !u!143 &620411392062414801
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 5898878821919307185, guid: 3ac4a7b28a447e8468753e3a3c1bb04e,
-    type: 3}
-  m_PrefabInstance: {fileID: 5750769806496590371}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 17704254428616893}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Height: 0
-  m_Radius: 0
-  m_SlopeLimit: 45
-  m_StepOffset: 0
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!65 &1902673830434743968
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 3413133275088370998, guid: 3ac4a7b28a447e8468753e3a3c1bb04e,
-    type: 3}
-  m_PrefabInstance: {fileID: 5750769806496590371}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 17704254428616893}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.7, y: 0.6, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &39575737468450221
 GameObject:
   m_ObjectHideFlags: 0
@@ -4034,6 +3942,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6039648421661595670}
+  - component: {fileID: 743515725736395615}
+  - component: {fileID: 6923827659191181681}
+  - component: {fileID: 991193755250905231}
+  - component: {fileID: 7586230332398636427}
+  - component: {fileID: 8438713042105015320}
+  - component: {fileID: 7981338515734238074}
   m_Layer: 0
   m_Name: ChrisParent
   m_TagString: Untagged
@@ -4056,6 +3970,110 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &743515725736395615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4807297715838114906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e747ab65d2d4da64db085d6868f41398, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6923827659191181681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4807297715838114906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0f0d73d210044242887557ca8a11849, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mover: {fileID: 8438713042105015320}
+  cc: {fileID: 991193755250905231}
+  map: {fileID: 0}
+  aic: {fileID: 0}
+  bm: {fileID: 0}
+  scatterWaypoint: {fileID: 0}
+  bullet: {fileID: 8542370833588064946, guid: f1212dd63f9305449a6a84390490e0be, type: 3}
+  bulletSpawn: {fileID: 3619292928662006947}
+  tf: {fileID: 3355527844164625639}
+  forwardSpeed: 10
+  rotateSpeed: 10
+  bulletCoolDown: 2
+  shootTime: 0
+  gm: {fileID: 0}
+--- !u!143 &991193755250905231
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4807297715838114906}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 0
+  m_Radius: 0
+  m_SlopeLimit: 45
+  m_StepOffset: 0
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &7586230332398636427
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4807297715838114906}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.6, z: 1.7}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8438713042105015320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4807297715838114906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08a2286327a5c8948b012a0c4a2366fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 6923827659191181681}
+--- !u!114 &7981338515734238074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4807297715838114906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa49bb726ef10d24abf14832a6391358, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  viewRadius: 5
+  viewAngle: 90
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 0
+  visibleTargets: []
+  seesEnemy: 0
+  currentTarget: {fileID: 0}
+  lastSighting: {fileID: 0}
+  enemyPosition: {fileID: 0}
 --- !u!1 &4837594614231250212
 GameObject:
   m_ObjectHideFlags: 0
@@ -7129,11 +7147,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6039648421661595670}
     m_Modifications:
-    - target: {fileID: 6844637478976371821, guid: 3ac4a7b28a447e8468753e3a3c1bb04e,
-        type: 3}
-      propertyPath: m_Name
-      value: Chris
-      objectReference: {fileID: 0}
     - target: {fileID: 819843893285976697, guid: 3ac4a7b28a447e8468753e3a3c1bb04e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7189,5 +7202,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6844637478976371821, guid: 3ac4a7b28a447e8468753e3a3c1bb04e,
+        type: 3}
+      propertyPath: m_Name
+      value: Chris
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 3ac4a7b28a447e8468753e3a3c1bb04e, type: 3}

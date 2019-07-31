@@ -10,6 +10,7 @@ public class PawnData : MonoBehaviour
     public MapGenerator map;
     public AIController aic;
     public BulletMover bm;
+    public FieldOfView fov;
 
     public GameObject scatterWaypoint;
     public GameObject bullet;
@@ -21,6 +22,9 @@ public class PawnData : MonoBehaviour
     public float rotateSpeed = 10;
     public float bulletCoolDown = 2f;
     public float shootTime = 0f;
+
+    public bool seesPlayer = false;
+    public bool scatter = false;
 
 
     public GameManager gm;

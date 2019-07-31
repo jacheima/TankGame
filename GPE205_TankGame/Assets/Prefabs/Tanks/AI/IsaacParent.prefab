@@ -3397,11 +3397,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8311559241610741342}
   - component: {fileID: 2148943620458572580}
-  - component: {fileID: 2737448856946312196}
-  - component: {fileID: 3324360241452759359}
-  - component: {fileID: 151192599898617121}
-  - component: {fileID: 8833148124157972976}
-  - component: {fileID: 9160378266341239586}
   m_Layer: 0
   m_Name: Isaac
   m_TagString: Untagged
@@ -3459,88 +3454,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &2737448856946312196
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4973045802307171405}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be10dee7aba24b249b5441e734fda28a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &3324360241452759359
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4973045802307171405}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0f0d73d210044242887557ca8a11849, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mover: {fileID: 151192599898617121}
-  cc: {fileID: 0}
-  map: {fileID: 0}
-  aic: {fileID: 0}
-  bm: {fileID: 0}
-  scatterWaypoint: {fileID: 0}
-  bullet: {fileID: 8542370833588064946, guid: f1212dd63f9305449a6a84390490e0be, type: 3}
-  bulletSpawn: {fileID: 4811369143718380666}
-  tf: {fileID: 8311559241610741342}
-  forwardSpeed: 10
-  rotateSpeed: 10
-  bulletCoolDown: 2
-  shootTime: 0
-  gm: {fileID: 0}
---- !u!114 &151192599898617121
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4973045802307171405}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08a2286327a5c8948b012a0c4a2366fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  data: {fileID: 3324360241452759359}
---- !u!143 &8833148124157972976
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4973045802307171405}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Height: 0
-  m_Radius: 0
-  m_SlopeLimit: 45
-  m_StepOffset: 0
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!65 &9160378266341239586
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4973045802307171405}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.7, y: 0.6, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5011286104501714692
 GameObject:
   m_ObjectHideFlags: 0
@@ -4527,6 +4440,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5254163162084873740}
+  - component: {fileID: 7552218526688690950}
+  - component: {fileID: 8565728657687040826}
+  - component: {fileID: 4992263437571024748}
+  - component: {fileID: 8357929841778577757}
+  - component: {fileID: 8144021982909528648}
   m_Layer: 0
   m_Name: IsaacParent
   m_TagString: Untagged
@@ -4549,6 +4467,88 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7552218526688690950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6079870835340170139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be10dee7aba24b249b5441e734fda28a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8565728657687040826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6079870835340170139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0f0d73d210044242887557ca8a11849, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mover: {fileID: 0}
+  cc: {fileID: 0}
+  map: {fileID: 0}
+  aic: {fileID: 0}
+  bm: {fileID: 0}
+  scatterWaypoint: {fileID: 0}
+  bullet: {fileID: 8542370833588064946, guid: f1212dd63f9305449a6a84390490e0be, type: 3}
+  bulletSpawn: {fileID: 4811369143718380666}
+  tf: {fileID: 8311559241610741342}
+  forwardSpeed: 10
+  rotateSpeed: 10
+  bulletCoolDown: 2
+  shootTime: 0
+  gm: {fileID: 0}
+--- !u!114 &4992263437571024748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6079870835340170139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08a2286327a5c8948b012a0c4a2366fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 0}
+--- !u!143 &8357929841778577757
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6079870835340170139}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 0
+  m_Radius: 0
+  m_SlopeLimit: 45
+  m_StepOffset: 0
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &8144021982909528648
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6079870835340170139}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.6, z: 1.7}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6103344123066431053
 GameObject:
   m_ObjectHideFlags: 0

@@ -166,7 +166,7 @@ GameObject:
   - component: {fileID: 6822960339450402788}
   - component: {fileID: 3790115683490499989}
   - component: {fileID: 4776685805478160372}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MiddleNorth (3)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -257,7 +257,7 @@ GameObject:
   - component: {fileID: 6468810439373515530}
   - component: {fileID: 4699020076295803367}
   - component: {fileID: 2278376593667733938}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: NorthWall
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -502,7 +502,7 @@ GameObject:
   - component: {fileID: 212912962586561819}
   - component: {fileID: 8952279470721641888}
   - component: {fileID: 8606046292255653602}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SouthWall
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -593,7 +593,7 @@ GameObject:
   - component: {fileID: 1680739394482832709}
   - component: {fileID: 4684372914936853453}
   - component: {fileID: 7558226691066010325}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MiddleNorth (2)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -746,7 +746,7 @@ GameObject:
   - component: {fileID: 4735771170879847536}
   - component: {fileID: 7260676948631031162}
   - component: {fileID: 6272554601077216768}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EastWall
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -837,7 +837,7 @@ GameObject:
   - component: {fileID: 4403489012346427214}
   - component: {fileID: 1194957106102912730}
   - component: {fileID: 8717646065665974366}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MiddleNorth (1)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -1088,7 +1088,7 @@ GameObject:
   - component: {fileID: 1850976419644762452}
   - component: {fileID: 8388174213191754491}
   - component: {fileID: 4990733499776311832}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MiddleNorth
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -1179,7 +1179,7 @@ GameObject:
   - component: {fileID: 7023809975019695246}
   - component: {fileID: 6968062503729350690}
   - component: {fileID: 7996769621686299223}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WestWall
   m_TagString: Wall
   m_Icon: {fileID: 0}

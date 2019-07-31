@@ -74,7 +74,7 @@ GameObject:
   - component: {fileID: 6783390529856484983}
   - component: {fileID: 728459590475127427}
   - component: {fileID: 1590957979682128097}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MiddleNorth (4)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -165,7 +165,7 @@ GameObject:
   - component: {fileID: 5449288841536174313}
   - component: {fileID: 1592265868196189582}
   - component: {fileID: 4638968216378491350}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MiddleNorth (5)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -367,7 +367,7 @@ GameObject:
   - component: {fileID: 3646716826631514300}
   - component: {fileID: 5018883231672746913}
   - component: {fileID: 3358850333745733554}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MiddleNorth (7)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -665,7 +665,7 @@ GameObject:
   - component: {fileID: 3863019223498300965}
   - component: {fileID: 4011982483224014736}
   - component: {fileID: 3601789751011307166}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SouthWall
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -756,7 +756,7 @@ GameObject:
   - component: {fileID: 6090569570656021825}
   - component: {fileID: 7532392062319604794}
   - component: {fileID: 8866693824189436491}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MiddleNorth (3)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -847,7 +847,7 @@ GameObject:
   - component: {fileID: 4207325420076841656}
   - component: {fileID: 9006977620302912769}
   - component: {fileID: 1670639650914948814}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WestWall
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -938,7 +938,7 @@ GameObject:
   - component: {fileID: 6423885101474630428}
   - component: {fileID: 7474674396198512482}
   - component: {fileID: 3250432616695069866}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MiddleNorth (1)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -1029,7 +1029,7 @@ GameObject:
   - component: {fileID: 6261460343846328120}
   - component: {fileID: 5429557824773091555}
   - component: {fileID: 7419755141245093389}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MiddleNorth
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -1120,7 +1120,7 @@ GameObject:
   - component: {fileID: 4784744144209156567}
   - component: {fileID: 6371994431117236581}
   - component: {fileID: 3822218411125928243}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: NorthWall
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -1288,7 +1288,7 @@ GameObject:
   - component: {fileID: 1287968332377184227}
   - component: {fileID: 2978875911810671253}
   - component: {fileID: 433421799438969272}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MiddleNorth (6)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -1379,7 +1379,7 @@ GameObject:
   - component: {fileID: 8159641578919846379}
   - component: {fileID: 8821025548137035511}
   - component: {fileID: 1767420183350284424}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EastWall
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -1470,7 +1470,7 @@ GameObject:
   - component: {fileID: 127326901747077773}
   - component: {fileID: 9007696936335095938}
   - component: {fileID: 2674801769907263517}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MiddleNorth (2)
   m_TagString: Wall
   m_Icon: {fileID: 0}

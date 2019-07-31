@@ -5942,6 +5942,7 @@ GameObject:
   - component: {fileID: 6293344113317206897}
   - component: {fileID: 5521768721421102010}
   - component: {fileID: -9209396856323045657}
+  - component: {fileID: 3005940568397138089}
   m_Layer: 0
   m_Name: BlakeParent
   m_TagString: Untagged
@@ -6003,6 +6004,7 @@ MonoBehaviour:
   map: {fileID: 0}
   aic: {fileID: 0}
   bm: {fileID: 0}
+  fov: {fileID: 3005940568397138089}
   scatterWaypoint: {fileID: 0}
   bullet: {fileID: 8542370833588064946, guid: f1212dd63f9305449a6a84390490e0be, type: 3}
   bulletSpawn: {fileID: 5296146267862106768}
@@ -6011,6 +6013,7 @@ MonoBehaviour:
   rotateSpeed: 10
   bulletCoolDown: 2
   shootTime: 0
+  seesPlayer: 0
   gm: {fileID: 0}
 --- !u!65 &6293344113317206897
 BoxCollider:
@@ -6056,6 +6059,32 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3005940568397138089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8206721838095239430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa49bb726ef10d24abf14832a6391358, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 3317105123333147531}
+  viewRadius: 3
+  viewAngle: 90
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 512
+  objectMask:
+    serializedVersion: 2
+    m_Bits: 256
+  visibleTargets: []
+  seesEnemy: 0
+  currentTarget: {fileID: 0}
+  lastSighting: {fileID: 0}
+  enemyPosition: {fileID: 0}
 --- !u!1 &8227182137093610410
 GameObject:
   m_ObjectHideFlags: 0

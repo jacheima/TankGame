@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\AI\AIController.cs" />
     <Compile Include="Assets\Scripts\AI\BlakeAIController.cs" />
     <Compile Include="Assets\Scripts\AI\ChrisAIController.cs" />
+    <Compile Include="Assets\Scripts\AI\FieldOfView.cs" />
     <Compile Include="Assets\Scripts\AI\IsaacAIController.cs" />
     <Compile Include="Assets\Scripts\AI\PatriciaAIController.cs" />
     <Compile Include="Assets\Scripts\BulletMover.cs" />

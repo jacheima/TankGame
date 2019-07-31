@@ -20,8 +20,7 @@ public class MapGenerator : MonoBehaviour
     public int numOfEnemies = 4;
     public List<int> enemyType;
 
-    [SerializeField]
-    private int seed;
+    public int seed;
 
     public Spawner spawner;
 

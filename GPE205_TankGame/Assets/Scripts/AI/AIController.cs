@@ -25,13 +25,18 @@ public class AIController : MonoBehaviour
     public bool scatter = false;
 
     public float scatterTime;
-    public float scatterMin = 5f;
-    public float scatterMax = 15f;
+    public int scatterMin = 10;
+    public int scatterMax = 60;
 
     //enums
     public enum AI_STATES
     {
         Chase, Scatter, Flee, Shoot, PowerUp
+    }
+
+    void Start()
+    {
+        StartCoroutine(ChooseScatterWaitTime());
     }
 
     public void ChaseAggressive()
@@ -105,12 +110,27 @@ public class AIController : MonoBehaviour
 
         if (Time.time > data.shootTime + data.bulletCoolDown)
         {
-            GameObject bullet = Instantiate(data.bullet, data.bulletSpawn.transform.position, data.bulletSpawn.transform.rotation);
-            data.shootTime = Time.time;
+            if (Vector3.Angle(transform.position, GameObject.FindGameObjectWithTag("Player").transform.position) <
+                data.fov.viewAngle / 2)
+            {
+                GameObject bullet = Instantiate(data.bullet, data.bulletSpawn.transform.position, data.bulletSpawn.transform.rotation);
+                data.shootTime = Time.time;
+            }
         }
-
-          
         
+    }
+
+    IEnumerator ChooseScatterWaitTime()
+    {
+        int n = Random.Range(scatterMin, scatterMax);
+        scatterTime = n;
+
+        yield return new WaitForSeconds(n);
+    }
+
+    public void Scatter()
+    {
+
     }
 
     public void Seek(Vector3 directionToMove)
