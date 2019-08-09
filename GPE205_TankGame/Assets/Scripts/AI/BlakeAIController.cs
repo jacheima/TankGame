@@ -26,8 +26,17 @@ public class BlakeAIController : AIController
                 }
                 break;
             case AI_STATES.Flee:
-                break;
-            case AI_STATES.PowerUp:
+                Flee();
+                if (data.health < data.health / 2)
+                {
+                    ChangeState(AI_STATES.Flee);
+                }
+
+                if (data.health > (data.health / 2) + 2)
+                {
+                    ChangeState(AI_STATES.Chase);
+                }
+
                 break;
             case AI_STATES.Scatter:
                 Scatter();
@@ -39,6 +48,11 @@ public class BlakeAIController : AIController
                 if (Time.time <= scatterTime && data.seesPlayer == false)
                 {
                     ChangeState(AI_STATES.Shoot);
+                }
+
+                if (Time.time >= scatterTime + scatterMin)
+                {
+                    ChangeState(AI_STATES.Chase);
                 }
                 break;
             case AI_STATES.Shoot:

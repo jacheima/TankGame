@@ -4651,6 +4651,7 @@ GameObject:
   - component: {fileID: 5416698843186488743}
   - component: {fileID: 435274616924791661}
   - component: {fileID: 6727893470001021069}
+  - component: {fileID: -8135462501309698843}
   m_Layer: 0
   m_Name: PatriciaParent
   m_TagString: Untagged
@@ -4685,6 +4686,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c90eb95d7d09d2e49bad6c07267c7fd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  data: {fileID: 8980027856476396257}
+  patrolPoints: []
+  currentPatrolPoint: {fileID: 0}
+  scatterWaypoint: {fileID: 0}
+  currentPatrolIndex: 0
+  stateStartTime: 0
+  currentState: 0
+  scatter: 0
+  scatterTime: 0
+  scatterMin: 10
+  scatterMax: 60
 --- !u!114 &8980027856476396257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4697,11 +4709,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0f0d73d210044242887557ca8a11849, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mover: {fileID: 0}
-  cc: {fileID: 0}
+  mover: {fileID: 5416698843186488743}
+  cc: {fileID: 435274616924791661}
   map: {fileID: 0}
   aic: {fileID: 0}
   bm: {fileID: 0}
+  fov: {fileID: -8135462501309698843}
   scatterWaypoint: {fileID: 0}
   bullet: {fileID: 8542370833588064946, guid: f1212dd63f9305449a6a84390490e0be, type: 3}
   bulletSpawn: {fileID: 886418190391463007}
@@ -4710,6 +4723,9 @@ MonoBehaviour:
   rotateSpeed: 10
   bulletCoolDown: 2
   shootTime: 0
+  seesPlayer: 0
+  scatter: 0
+  health: 10
   gm: {fileID: 0}
 --- !u!114 &5416698843186488743
 MonoBehaviour:
@@ -4723,7 +4739,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08a2286327a5c8948b012a0c4a2366fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 0}
+  data: {fileID: 8980027856476396257}
 --- !u!143 &435274616924791661
 CharacterController:
   m_ObjectHideFlags: 0
@@ -4755,6 +4771,32 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.6, z: 1.7}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-8135462501309698843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5992784227542824564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa49bb726ef10d24abf14832a6391358, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 8980027856476396257}
+  viewRadius: 0
+  viewAngle: 0
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 0
+  objectMask:
+    serializedVersion: 2
+    m_Bits: 0
+  visibleTargets: []
+  seesEnemy: 0
+  currentTarget: {fileID: 0}
+  lastSighting: {fileID: 0}
+  enemyPosition: {fileID: 0}
 --- !u!1 &6095133148245032485
 GameObject:
   m_ObjectHideFlags: 0

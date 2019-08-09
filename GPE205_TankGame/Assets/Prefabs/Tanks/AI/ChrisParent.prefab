@@ -3982,6 +3982,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e747ab65d2d4da64db085d6868f41398, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  data: {fileID: 6923827659191181681}
+  patrolPoints: []
+  currentPatrolPoint: {fileID: 0}
+  scatterWaypoint: {fileID: 0}
+  currentPatrolIndex: 0
+  stateStartTime: 0
+  currentState: 0
+  scatter: 0
+  scatterTime: 0
+  scatterMin: 10
+  scatterMax: 60
 --- !u!114 &6923827659191181681
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3999,6 +4010,7 @@ MonoBehaviour:
   map: {fileID: 0}
   aic: {fileID: 0}
   bm: {fileID: 0}
+  fov: {fileID: 7981338515734238074}
   scatterWaypoint: {fileID: 0}
   bullet: {fileID: 8542370833588064946, guid: f1212dd63f9305449a6a84390490e0be, type: 3}
   bulletSpawn: {fileID: 3619292928662006947}
@@ -4007,6 +4019,9 @@ MonoBehaviour:
   rotateSpeed: 10
   bulletCoolDown: 2
   shootTime: 0
+  seesPlayer: 0
+  scatter: 0
+  health: 10
   gm: {fileID: 0}
 --- !u!143 &991193755250905231
 CharacterController:
@@ -4064,9 +4079,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa49bb726ef10d24abf14832a6391358, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  data: {fileID: 6923827659191181681}
   viewRadius: 5
   viewAngle: 90
-  targetMask:
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 0
+  objectMask:
     serializedVersion: 2
     m_Bits: 0
   visibleTargets: []

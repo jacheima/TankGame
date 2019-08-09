@@ -13,6 +13,8 @@ public class AIController : MonoBehaviour
     public List<Transform> patrolPoints;
     public Transform currentPatrolPoint;
 
+    public GameObject scatterWaypoint;
+
     //int variables
     public int currentPatrolIndex = 0;
 
@@ -31,7 +33,7 @@ public class AIController : MonoBehaviour
     //enums
     public enum AI_STATES
     {
-        Chase, Scatter, Flee, Shoot, PowerUp
+        Chase, Scatter, Flee, Shoot
     }
 
     void Start()
@@ -64,25 +66,34 @@ public class AIController : MonoBehaviour
 
     public void ChasePatrol()
     {
-        Vector3 directionToTarget = (currentPatrolPoint.position - transform.position).normalized;
-        Seek(directionToTarget);
 
-        if (Vector3.Distance(transform.position, currentPatrolPoint.position) < 5f)
+        if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("Player").transform.position) >
+            data.fov.viewRadius)
         {
+            Vector3 directionToPlayer = (GameObject.FindGameObjectWithTag("Player").transform.position - transform.position).normalized;
+            Seek(directionToPlayer);
+        }
+        else
+        {
+            Vector3 directionToTarget = (currentPatrolPoint.position - transform.position).normalized;
+            Seek(directionToTarget);
 
-            if (currentPatrolIndex + 1 < patrolPoints.Count)
+            if (Vector3.Distance(transform.position, currentPatrolPoint.position) < 5f)
             {
-                currentPatrolIndex++;
 
+                if (currentPatrolIndex + 1 < patrolPoints.Count)
+                {
+                    currentPatrolIndex++;
+
+                }
+                else
+                {
+                    currentPatrolIndex = 0;
+
+                }
+
+                currentPatrolPoint = patrolPoints[currentPatrolIndex];
             }
-            else
-            {
-                currentPatrolIndex = 0;
-
-            }
-
-            currentPatrolPoint = patrolPoints[currentPatrolIndex];
-
         }
     }
 
@@ -120,6 +131,12 @@ public class AIController : MonoBehaviour
         
     }
 
+    public void Flee()
+    {
+        Scatter();
+        data.health += (data.health / 4) * Time.deltaTime;
+    }
+
     IEnumerator ChooseScatterWaitTime()
     {
         int n = Random.Range(scatterMin, scatterMax);
@@ -130,7 +147,8 @@ public class AIController : MonoBehaviour
 
     public void Scatter()
     {
-
+        Vector3 directionToTarget = (scatterWaypoint.transform.position - transform.position).normalized;
+        Seek(directionToTarget);
     }
 
     public void Seek(Vector3 directionToMove)

@@ -9,6 +9,8 @@ public class Spawner : MonoBehaviour
     public GameObject[] enemies;
     public GameObject enemyParent;
 
+    public GameObject scatter;
+
     public void SpawnEnemy(int shipNumber)
     {
         //Get a random way point
@@ -32,6 +34,10 @@ public class Spawner : MonoBehaviour
 
                     //child the object
                     blake.transform.parent = enemyParent.transform;
+
+                    GameObject scatterWP = Instantiate(scatter, new Vector3(5f, .33f, 2f), Quaternion.identity);
+
+                    blake.GetComponent<BlakeAIController>().scatterWaypoint = scatterWP;
 
                     //for each waypoint in waypoints
                     for (int i = 0; i < randomRoom.waypoints.Length; i++)
@@ -62,6 +68,10 @@ public class Spawner : MonoBehaviour
                     //child the object
                     isaac.transform.parent = enemyParent.transform;
 
+                    GameObject scatterWP = Instantiate(scatter, new Vector3(12f, .33f, -5f), Quaternion.identity);
+
+                    isaac.GetComponent<IsaacAIController>().scatterWaypoint = scatterWP;
+
                     //for each waypoint in waypoints
                     for (int i = 0; i < randomRoom.waypoints.Length; i++)
                     {
@@ -85,6 +95,10 @@ public class Spawner : MonoBehaviour
 
                     //child the object
                     patricia.transform.parent = enemyParent.transform;
+
+                    GameObject scatterWP = Instantiate(scatter, new Vector3(-2f, .33f, -5f), Quaternion.identity);
+
+                    patricia.GetComponent<PatriciaAIController>().scatterWaypoint = scatterWP;
 
                     //for each waypoint in waypoints
                     for (int i = 0; i < randomRoom.waypoints.Length; i++)
@@ -110,6 +124,10 @@ public class Spawner : MonoBehaviour
 
                     //child the object
                     chris.transform.parent = enemyParent.transform;
+
+                    GameObject scatterWP = Instantiate(scatter, new Vector3(5f, .33f, -12f), Quaternion.identity);
+
+                    chris.GetComponent<ChrisAIController>().scatterWaypoint = scatterWP;
 
                     //for each waypoint in waypoints
                     for (int i = 0; i < randomRoom.waypoints.Length; i++)

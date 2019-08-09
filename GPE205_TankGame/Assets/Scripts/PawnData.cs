@@ -26,6 +26,8 @@ public class PawnData : MonoBehaviour
     public bool seesPlayer = false;
     public bool scatter = false;
 
+    public float health = 10;
+
 
     public GameManager gm;
     void Start()

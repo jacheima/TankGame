@@ -214,6 +214,7 @@ MonoBehaviour:
   - {fileID: 5992784227542824564, guid: a10f8a4e84a86a045bfe326524b1702a, type: 3}
   - {fileID: 4807297715838114906, guid: 59d5936c35396f746bc96cf163bc5095, type: 3}
   enemyParent: {fileID: 1950349569}
+  scatter: {fileID: 4034459208012893259, guid: f1ae7494995b4084e880be03a6b7b778, type: 3}
 --- !u!4 &217435184
 Transform:
   m_ObjectHideFlags: 0
