@@ -5945,7 +5945,7 @@ GameObject:
   - component: {fileID: 3005940568397138089}
   m_Layer: 0
   m_Name: BlakeParent
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6017,6 +6017,12 @@ MonoBehaviour:
   seesPlayer: 0
   scatter: 0
   health: 10
+  player1cam: {fileID: 0}
+  player2cam: {fileID: 0}
+  player1: {fileID: 0}
+  player2: {fileID: 0}
+  player1IC: {fileID: 0}
+  player2IC: {fileID: 0}
   gm: {fileID: 0}
 --- !u!65 &6293344113317206897
 BoxCollider:

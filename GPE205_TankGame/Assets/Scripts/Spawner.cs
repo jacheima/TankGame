@@ -11,6 +11,11 @@ public class Spawner : MonoBehaviour
 
     public GameObject scatter;
 
+    private void Start()
+    {
+        data = GameObject.FindGameObjectWithTag("Player").GetComponent<PawnData>();
+    }
+
     public void SpawnEnemy(int shipNumber)
     {
         //Get a random way point

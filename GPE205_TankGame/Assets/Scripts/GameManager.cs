@@ -1,10 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public List<GameObject> Enemies;
+    public List<GameObject> Players;
+
+    public int playerOneLives = 3;
+    public int playerTwoLives = 3;
+
+    public int playerOneScore = 0;
+    public int playerTwoScore = 0;
+
+    public int highScore = 0;
+
+    public bool singlePlayer = false;
+    public bool multiplayer = false;
 
     //Static instance of GameManager which allows it to be accessed by any other script.
     public static GameManager instance = null;
@@ -32,8 +45,61 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public void AddDamange()
+    void Start()
     {
 
+    }
+
+    void Update()
+    {
+        
+    }
+
+    public void AddDamange(GameObject target, GameObject shooter)
+    {
+        target.GetComponent<PawnData>().health--; 
+
+        if(target.GetComponent<PawnData>().health <= 0)
+        {
+            Destroy(target);
+            AddPoints(shooter);
+        }
+    }
+
+    public void AddPoints(GameObject theShooter)
+    {
+        if(theShooter.tag == "Player")
+        {
+            playerOneScore++;
+        }
+
+        if(theShooter.tag == "Player2")
+        {
+            playerTwoScore++;
+        }
+
+        if(theShooter.tag == "Enemy")
+        {
+            Debug.Log("An player has been killed");
+        }
+    }
+
+    public void SinglePlayer()
+    {
+        singlePlayer = true;
+        multiplayer = false;
+        SceneManager.LoadScene(1);       
+    }
+
+    public void Multiplayer()
+    {
+        singlePlayer = false;
+        multiplayer = true;
+        SceneManager.LoadScene(1);
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }

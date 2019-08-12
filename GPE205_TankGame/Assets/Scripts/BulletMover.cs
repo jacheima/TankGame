@@ -29,20 +29,21 @@ public class BulletMover : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
-        GameObject enemy = other.gameObject;
-        if (other.gameObject.tag == "Enemy")
+        
+        if (other.gameObject.tag == "Enemy" || other.gameObject.tag == "Player" || other.gameObject.tag == "Player2")
         {
-            Destroy(enemy);
+            Destroy(gameObject, bulletDestroy); 
+            gm.AddDamange(other.gameObject, gameObject);
         }
 
         if (other.gameObject.tag == "Wall")
         {
-            Destroy(gameObject);
+            Destroy(gameObject, bulletDestroy);
         }
 
         if (other.gameObject.tag == "Floor")
         {
-            Destroy(gameObject);
+            Destroy(gameObject, bulletDestroy);
         }
     }
 }

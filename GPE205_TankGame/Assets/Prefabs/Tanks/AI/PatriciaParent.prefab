@@ -4654,7 +4654,7 @@ GameObject:
   - component: {fileID: -8135462501309698843}
   m_Layer: 0
   m_Name: PatriciaParent
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4726,6 +4726,12 @@ MonoBehaviour:
   seesPlayer: 0
   scatter: 0
   health: 10
+  player1cam: {fileID: 0}
+  player2cam: {fileID: 0}
+  player1: {fileID: 0}
+  player2: {fileID: 0}
+  player1IC: {fileID: 0}
+  player2IC: {fileID: 0}
   gm: {fileID: 0}
 --- !u!114 &5416698843186488743
 MonoBehaviour:
