@@ -30,10 +30,44 @@ public class PawnData : MonoBehaviour
 
 
     public GameManager gm;
+
+    void Awake()
+    {
+
+        
+
+
+    }
     void Start()
     {
+        gm = GameManager.instance;
+
+        gm.player1Score = 0;
+        gm.player2Score = 0;
+
         mover = GetComponent<PawnMover>();
         cc = GetComponent<CharacterController>();
         tf = GetComponent<Transform>();
+
+        gm.GetStuff();
+
+        if (gm.singlePlayer == true && gm.multiPlayer == false)
+        {
+            gm.player2.SetActive(false);
+            gm.player2Camera.enabled = false;
+            gm.player2IC.enabled = false;
+
+            gm.player1Camera.rect = new Rect(0f, 0f, 1f, 1f);
+        }
+
+        if (gm.singlePlayer == false && gm.multiPlayer == true)
+        {
+            gm.player2.SetActive(true);
+            gm.player2Camera.enabled = true;
+            gm.player2IC.enabled = true;
+
+            gm.player1Camera.rect = new Rect(0f, 0f, .5f, 1f);
+        }
     }
+
 }

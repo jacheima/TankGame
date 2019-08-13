@@ -13,6 +13,8 @@ public class BulletMover : MonoBehaviour
 
     public GameManager gm;
 
+    public PawnData playerData;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,28 +23,47 @@ public class BulletMover : MonoBehaviour
         Destroy(gameObject, bulletDestroy);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SetPlayer(PawnData data)
     {
-        
+        playerData = data;
     }
 
     void OnCollisionEnter(Collision other)
     {
-        GameObject enemy = other.gameObject;
-        if (other.gameObject.tag == "Enemy")
-        {
-            Destroy(enemy);
-        }
-
-        if (other.gameObject.tag == "Wall")
+        if (other.gameObject.tag == "Enemy" || other.gameObject.tag == "Player" || other.gameObject.tag == "Player2")
         {
             Destroy(gameObject);
-        }
+            other.gameObject.GetComponent<PawnData>().health--;
 
-        if (other.gameObject.tag == "Floor")
-        {
-            Destroy(gameObject);
+            if (other.gameObject.GetComponent<PawnData>().health <= 0)
+            {
+
+                //if (other.gameObject == playerData.gameObject)
+                //{
+                //    if (playerData.gameObject.tag == "Player")
+                //    {
+                //        playerData.gm.player1died = true;
+                //    }
+
+                //    if (playerData.gameObject.tag == "Player2")
+                //    {
+                //        playerData.gm.player2died = true;
+                //    }
+                //}
+
+                if (playerData.gameObject.tag == "Player")
+                {
+                    gm.player1Score++;
+                }
+
+                if (playerData.gameObject.tag == "Player2")
+                {
+                    gm.player2Score++;
+                }
+
+                Destroy(other.gameObject);
+
+            }
         }
     }
 }

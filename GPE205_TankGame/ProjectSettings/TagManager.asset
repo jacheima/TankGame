@@ -8,6 +8,12 @@ TagManager:
   - Aggressive
   - Wall
   - Floor
+  - GameManager
+  - Player2
+  - Player2IC
+  - Player2Camera
+  - Player1IC
+  - Player1Camera
   layers:
   - Default
   - TransparentFX

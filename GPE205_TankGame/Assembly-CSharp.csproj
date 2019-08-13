@@ -76,6 +76,7 @@
     <Compile Include="Assets\Scripts\MapGenerator.cs" />
     <Compile Include="Assets\Scripts\PawnData.cs" />
     <Compile Include="Assets\Scripts\PawnMover.cs" />
+    <Compile Include="Assets\Scripts\Player2IC.cs" />
     <Compile Include="Assets\Scripts\Spawner.cs" />
     <Compile Include="Assets\Scripts\Waypoint.cs" />
     <Reference Include="Unity.Timeline.Editor">
