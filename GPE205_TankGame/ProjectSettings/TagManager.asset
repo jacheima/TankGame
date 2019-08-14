@@ -14,6 +14,12 @@ TagManager:
   - Player2Camera
   - Player1IC
   - Player1Camera
+  - GameOverPanel
+  - Enemy
+  - P2ScoreTxt
+  - P2LivesTxt
+  - P1ScoreTxt
+  - P1LivesTxt
   layers:
   - Default
   - TransparentFX

@@ -51,7 +51,7 @@ public class PawnData : MonoBehaviour
 
         gm.GetStuff();
 
-        if (gm.singlePlayer == true && gm.multiPlayer == false)
+        if (gm.singlePlayer == true && gm.multiPlayer == false && gm.player2 != null)
         {
             gm.player2.SetActive(false);
             gm.player2Camera.enabled = false;
@@ -60,7 +60,7 @@ public class PawnData : MonoBehaviour
             gm.player1Camera.rect = new Rect(0f, 0f, 1f, 1f);
         }
 
-        if (gm.singlePlayer == false && gm.multiPlayer == true)
+        if (gm.singlePlayer == false && gm.multiPlayer == true && gm.player2 != null)
         {
             gm.player2.SetActive(true);
             gm.player2Camera.enabled = true;

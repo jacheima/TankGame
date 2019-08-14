@@ -676,7 +676,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 886418190391463007}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.944, y: 0, z: 0.009}
+  m_LocalPosition: {x: 1.937, y: 0, z: 0.009}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3110895225285207578}
@@ -4654,7 +4654,7 @@ GameObject:
   - component: {fileID: -8135462501309698843}
   m_Layer: 0
   m_Name: PatriciaParent
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7225,6 +7225,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Patricia
+      objectReference: {fileID: 0}
+    - target: {fileID: 2029864373464647198, guid: 35dabaedff3f8824da9143bb2673d77c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.937
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}

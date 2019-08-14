@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using GameObject = UnityEngine.GameObject;
 
 public class GameManager : MonoBehaviour
 {
@@ -30,8 +29,7 @@ public class GameManager : MonoBehaviour
     public InputController player1IC;
     public Player2IC player2IC;
 
-    public GameObject gameOverPannel1;
-    public GameObject gameOverPannel2;
+    public GameObject gameOverPanel;
 
     public Text player1ScoreText;
     public Text player2ScoreText;
@@ -48,6 +46,8 @@ public class GameManager : MonoBehaviour
         //Check if instance already exists
         if (instance == null)
         {
+            Debug.Log("Creating a Game Manager");
+
             //if not, set instance to this
             instance = this;
         }
@@ -67,14 +67,19 @@ public class GameManager : MonoBehaviour
         if (player1died)
         {
 
-            GameObject playerOne = Instantiate(player1, new Vector3(5f, 13f, 197f), Quaternion.identity);
+            player1.transform.localPosition = new Vector3(5f, 13f, 197f);
+            player1Camera.transform.localPosition = new Vector3(5f, 17f, 192f);
+            player1.SetActive(true);
+            player1died = false;
+            player1.gameObject.GetComponent<PawnData>().health = 10f;
 
             player1Lives--;
 
             if (player1Lives <= 0)
             {
-                gameOverPannel1.SetActive(true);
-                SceneManager.LoadScene(2);
+                player1Camera.rect = new Rect(0f, 0f, 1f, 1f);
+                gameOverPanel.SetActive(true);
+
             }
 
             UpdatePlayer1UI();
@@ -82,26 +87,23 @@ public class GameManager : MonoBehaviour
 
         if (player2died)
         {
-            GameObject playerTwo = Instantiate(player2, new Vector3(6f, 13f, 197f), Quaternion.identity);
+            player2.transform.position = new Vector3(6f, 13f, 197f);
+            player2Camera.transform.position = new Vector3(6.5f, 17f, 192f);
+            player2.SetActive(true);
+            player2died = false;
+
             player2Lives--;
 
-            if (player1Lives <= 0)
+            if (player2Lives <= 0)
             {
-                gameOverPannel2.SetActive(true);
-                SceneManager.LoadScene(2);
+                player1Camera.rect = new Rect(0f, 0f, 1f, 1f);
+                gameOverPanel.SetActive(true);
             }
 
             UpdatePlayer2UI();
         }
 
     }
-
-
-    public void KillThem()
-    {
-
-    }
-
 
     public void StartSinglePlayer()
     {
@@ -116,6 +118,8 @@ public class GameManager : MonoBehaviour
     {
         singlePlayer = false;
         multiPlayer = true;
+
+       
 
         SceneManager.LoadScene(1);
     }
@@ -132,15 +136,34 @@ public class GameManager : MonoBehaviour
 
     public void GetStuff()
     {
-        player1 = GameObject.FindWithTag("Player").gameObject;
-        player1IC = GameObject.FindWithTag("Player1IC").GetComponent<InputController>();
-        player1Camera = GameObject.FindWithTag("Player1Camera").GetComponent<Camera>();
+        player1 = GameObject.FindWithTag("Player");
+        if (player1 != null)
+        {
+            player1IC = GameObject.FindWithTag("Player1IC").GetComponent<InputController>();
+            player1Camera = GameObject.FindWithTag("Player1Camera").GetComponent<Camera>();
+        }
 
-        player2 = GameObject.FindWithTag("Player2").gameObject;
-        player2IC = GameObject.FindWithTag("Player2IC").GetComponent<Player2IC>();
-        player2Camera = GameObject.FindWithTag("Player2Camera").GetComponent<Camera>();
-        
-        
+        player2 = GameObject.FindWithTag("Player2");
+        if (player2 != null)
+        {
+            player2IC = GameObject.FindWithTag("Player2IC").GetComponent<Player2IC>();
+            player2Camera = GameObject.FindWithTag("Player2Camera").GetComponent<Camera>();
+        }
+
+        gameOverPanel = GameObject.FindWithTag("GameOverPanel");
+
+        player1ScoreText = GameObject.FindWithTag("P1ScoreTxt").GetComponent<Text>();
+        player1LivesText = GameObject.FindWithTag("P1LivesTxt").GetComponent<Text>();
+
+        player1LivesText.text = player1Lives.ToString();
+        player1ScoreText.text = player1Score.ToString();
+
+        player2ScoreText = GameObject.FindWithTag("P2ScoreTxt").GetComponent<Text>();
+        player2LivesText = GameObject.FindWithTag("P2LivesTxt").GetComponent<Text>();
+
+        player2LivesText.text = player2Lives.ToString();
+        player2ScoreText.text = player2Score.ToString();
+
     }
 
     public void MainMenu()
@@ -150,13 +173,18 @@ public class GameManager : MonoBehaviour
 
     void UpdatePlayer1UI()
     {
-       //player1ScoreText.text = player1Score.ToString();
-        //player1LivesText.text = player1Lives.ToString();
+        player1ScoreText.text = player1Score.ToString();
+        player1LivesText.text = player1Lives.ToString();
     }
 
     void UpdatePlayer2UI()
     {
-        //player2ScoreText.text = player2Score.ToString();
-        //player2LivesText.text = player2Lives.ToString();
+        player2ScoreText.text = player2Score.ToString();
+        player2LivesText.text = player2Lives.ToString();
+    }
+
+    public void GameOver()
+    {
+        SceneManager.LoadScene(2);
     }
 }

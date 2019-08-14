@@ -13,6 +13,10 @@ public class Spawner : MonoBehaviour
 
     public GameManager gm;
 
+    void Awake()
+    {
+    }
+
     void Start()
     {
         gm = GameManager.instance;
@@ -26,12 +30,15 @@ public class Spawner : MonoBehaviour
 
         int randWayPoint = Random.Range(0, randomRoom.waypoints.Length);
 
-        
-
         switch (shipNumber)
         {
             case 0:
                 //Blake
+
+
+                Debug.Log("Gm: " + gm);
+                Debug.Log("Enemies in gm: " + gm.Enemies);
+                Debug.Log("enmenies in spawer from first index: " + enemies[0]);
 
                 if (!gm.Enemies.Contains(enemies[0]))
                 {
@@ -64,6 +71,9 @@ public class Spawner : MonoBehaviour
                 break;
             case 1:
                 //Isaac
+                Debug.Log("Gm: " + GameManager.instance.gameObject);
+                Debug.Log("Enemies in gm: " + GameManager.instance.Enemies);
+                Debug.Log("enmenies in spawer from first index: " + enemies[1]);
 
                 if (!gm.Enemies.Contains(enemies[1]))
                 {
@@ -94,6 +104,10 @@ public class Spawner : MonoBehaviour
                 break;
             //Patricia
             case 2:
+
+                Debug.Log("Gm: " + gm);
+                Debug.Log("Enemies in gm: " + gm.Enemies);
+                Debug.Log("enmenies in spawer from first index: " + enemies[2]);
                 if (!gm.Enemies.Contains(enemies[2]))
                 {
                     //Instantiate Blake at the random waypoint
@@ -122,7 +136,10 @@ public class Spawner : MonoBehaviour
                 break;
             //Chris
             case 3:
-                if (!gm.Enemies.Contains(enemies[2]))
+                Debug.Log("Gm: " + gm);
+                Debug.Log("Enemies in gm: " + gm.Enemies);
+                Debug.Log("enmenies in spawer from first index: " + enemies[3]);
+                if (!gm.Enemies.Contains(enemies[3]))
                 {
 
                     //Instantiate Blake at the random waypoint

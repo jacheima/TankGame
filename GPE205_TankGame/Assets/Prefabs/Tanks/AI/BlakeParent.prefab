@@ -4013,7 +4013,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5296146267862106768}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.959, y: 0.036, z: 0.003}
+  m_LocalPosition: {x: 1.87, y: 0.036, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 133057057906479481}
@@ -5945,7 +5945,7 @@ GameObject:
   - component: {fileID: 3005940568397138089}
   m_Layer: 0
   m_Name: BlakeParent
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

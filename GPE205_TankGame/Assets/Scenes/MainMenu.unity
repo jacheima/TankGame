@@ -1471,14 +1471,24 @@ MonoBehaviour:
   Enemies: []
   singlePlayer: 0
   multiPlayer: 0
+  player1died: 0
+  player2died: 0
   player1Score: 0
   player2Score: 0
+  player1Lives: 3
+  player2Lives: 3
   player1: {fileID: 6699056938031574579, guid: 63b0ae83b06c7c442a6ece7c509ba7a8, type: 3}
   player2: {fileID: 0}
   player1Camera: {fileID: 0}
   player2Camera: {fileID: 0}
   player1IC: {fileID: 0}
   player2IC: {fileID: 0}
+  gameOverPannel1: {fileID: 0}
+  gameOverPannel2: {fileID: 0}
+  player1ScoreText: {fileID: 0}
+  player2ScoreText: {fileID: 0}
+  player1LivesText: {fileID: 0}
+  player2LivesText: {fileID: 0}
 --- !u!4 &2092223356
 Transform:
   m_ObjectHideFlags: 0
