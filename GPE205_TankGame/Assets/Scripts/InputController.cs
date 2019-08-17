@@ -50,7 +50,11 @@ public class InputController : MonoBehaviour
             {
                 GameObject bullet = Instantiate(data.bullet, data.bulletSpawn.transform.position, data.bulletSpawn.transform.rotation);
                 data.shootTime = Time.deltaTime;
+<<<<<<< HEAD
                 
+=======
+                data.bm.SetPlayer(data);
+>>>>>>> master
             }
         }
 

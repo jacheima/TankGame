@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class MapGenerator : MonoBehaviour
@@ -20,14 +19,16 @@ public class MapGenerator : MonoBehaviour
     public int numOfEnemies = 4;
     public List<int> enemyType;
 
-    public int seed;
+    public int seedNumber;
 
     public Spawner spawner;
 
     public List<GameObject> mapList;
 
-    public PawnData data;
-    
+    public bool randomLevel;
+
+    GameManager gm = GameManager.instance;
+
 
     void Start()
     {
@@ -40,12 +41,13 @@ public class MapGenerator : MonoBehaviour
         }
         else
         {
-            Random.InitState(seed);
+            Random.InitState(seedNumber);
         }
-
         
 
         CreateMap();
+
+       
     }
 
     void CreateMap()
@@ -101,7 +103,7 @@ public class MapGenerator : MonoBehaviour
             }
         }
 
-        while (data.gm.Enemies.Count < 4)
+        while (gm.Enemies.Count < 4)
         {
             
             spawner.SpawnEnemy(Random.Range(0, enemyType.Count));

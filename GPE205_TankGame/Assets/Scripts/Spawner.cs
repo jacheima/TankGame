@@ -11,11 +11,24 @@ public class Spawner : MonoBehaviour
 
     public GameObject scatter;
 
+<<<<<<< HEAD
     private void Start()
     {
         data = GameObject.FindGameObjectWithTag("Player").GetComponent<PawnData>();
     }
 
+=======
+    public GameManager gm;
+
+    void Awake()
+    {
+    }
+
+    void Start()
+    {
+        gm = GameManager.instance;
+    }
+>>>>>>> master
     public void SpawnEnemy(int shipNumber)
     {
         //Get a random way point
@@ -25,14 +38,17 @@ public class Spawner : MonoBehaviour
 
         int randWayPoint = Random.Range(0, randomRoom.waypoints.Length);
 
-        Debug.Log(shipNumber);
-
         switch (shipNumber)
         {
             case 0:
                 //Blake
 
-                if (!data.gm.Enemies.Contains(enemies[0]))
+
+                Debug.Log("Gm: " + gm);
+                Debug.Log("Enemies in gm: " + gm.Enemies);
+                Debug.Log("enmenies in spawer from first index: " + enemies[0]);
+
+                if (!gm.Enemies.Contains(enemies[0]))
                 {
                     //Instantiate Blake at the random waypoint
                     GameObject blake = Instantiate(enemies[0], randomRoom.waypoints[randWayPoint].position, Quaternion.identity);
@@ -57,14 +73,17 @@ public class Spawner : MonoBehaviour
                     blake.GetComponent<BlakeAIController>().currentPatrolPoint =
                         blake.GetComponent<BlakeAIController>().patrolPoints[0];
 
-                    data.gm.Enemies.Add(enemies[0]); 
+                    gm.Enemies.Add(enemies[0]); 
                 }
 
                 break;
             case 1:
                 //Isaac
+                Debug.Log("Gm: " + GameManager.instance.gameObject);
+                Debug.Log("Enemies in gm: " + GameManager.instance.Enemies);
+                Debug.Log("enmenies in spawer from first index: " + enemies[1]);
 
-                if (!data.gm.Enemies.Contains(enemies[1]))
+                if (!gm.Enemies.Contains(enemies[1]))
                 {
 
                     //Instantiate Blake at the random waypoint
@@ -87,13 +106,17 @@ public class Spawner : MonoBehaviour
 
                     //sets the current point point index
 
-                    data.gm.Enemies.Add(enemies[1]); 
+                    gm.Enemies.Add(enemies[1]); 
                 }
 
                 break;
             //Patricia
             case 2:
-                if (!data.gm.Enemies.Contains(enemies[2]))
+
+                Debug.Log("Gm: " + gm);
+                Debug.Log("Enemies in gm: " + gm.Enemies);
+                Debug.Log("enmenies in spawer from first index: " + enemies[2]);
+                if (!gm.Enemies.Contains(enemies[2]))
                 {
                     //Instantiate Blake at the random waypoint
                     GameObject patricia = Instantiate(enemies[2], randomRoom.waypoints[randWayPoint].position, Quaternion.identity);
@@ -115,13 +138,16 @@ public class Spawner : MonoBehaviour
 
                     //sets the current point point index
 
-                    data.gm.Enemies.Add(enemies[2]); 
+                    gm.Enemies.Add(enemies[2]); 
                 }
 
                 break;
             //Chris
             case 3:
-                if (!data.gm.Enemies.Contains(enemies[2]))
+                Debug.Log("Gm: " + gm);
+                Debug.Log("Enemies in gm: " + gm.Enemies);
+                Debug.Log("enmenies in spawer from first index: " + enemies[3]);
+                if (!gm.Enemies.Contains(enemies[3]))
                 {
 
                     //Instantiate Blake at the random waypoint
@@ -144,7 +170,7 @@ public class Spawner : MonoBehaviour
 
                     //sets the current point point index
 
-                    data.gm.Enemies.Add(enemies[3]);
+                    gm.Enemies.Add(enemies[3]);
                 }
                 break;
         }
