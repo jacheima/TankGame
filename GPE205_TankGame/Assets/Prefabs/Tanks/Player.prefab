@@ -2921,13 +2921,8 @@ MonoBehaviour:
   bm: {fileID: 0}
   fov: {fileID: 0}
   scatterWaypoint: {fileID: 0}
-<<<<<<< HEAD
-  bullet: {fileID: 0}
-  bulletSpawn: {fileID: 0}
-=======
   bullet: {fileID: 8542370833588064946, guid: f1212dd63f9305449a6a84390490e0be, type: 3}
   bulletSpawn: {fileID: 5570224801386800453}
->>>>>>> master
   tf: {fileID: 6699056938031574573}
   forwardSpeed: 4
   rotateSpeed: 50
@@ -2936,15 +2931,6 @@ MonoBehaviour:
   seesPlayer: 0
   scatter: 0
   health: 10
-<<<<<<< HEAD
-  player1cam: {fileID: 0}
-  player2cam: {fileID: 0}
-  player1: {fileID: 0}
-  player2: {fileID: 0}
-  player1IC: {fileID: 0}
-  player2IC: {fileID: 0}
-=======
->>>>>>> master
   gm: {fileID: 0}
 --- !u!114 &6699056938031574575
 MonoBehaviour:

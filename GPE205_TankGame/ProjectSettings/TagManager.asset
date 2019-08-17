@@ -8,13 +8,6 @@ TagManager:
   - Aggressive
   - Wall
   - Floor
-<<<<<<< HEAD
-  - Player2
-  - Player2Camera
-  - Player2IC
-  - GameManager
-  - Enemy
-=======
   - GameManager
   - Player2
   - Player2IC
@@ -27,7 +20,6 @@ TagManager:
   - P2LivesTxt
   - P1ScoreTxt
   - P1LivesTxt
->>>>>>> master
   layers:
   - Default
   - TransparentFX

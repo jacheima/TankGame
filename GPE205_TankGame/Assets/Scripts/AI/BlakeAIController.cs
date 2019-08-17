@@ -15,7 +15,7 @@ public class BlakeAIController : AIController
             case AI_STATES.Chase:
                 ChaseAggressive();
 
-                if(Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("Aggressive").transform.position) <= 2f && data.seesPlayer == true)
+                if (data.seesPlayer == true)
                 {
                     ChangeState(AI_STATES.Shoot);
                 }
@@ -44,7 +44,7 @@ public class BlakeAIController : AIController
                 {
                     ChangeState(AI_STATES.Chase);
                 }
-                
+                Scatter();
                 if (Time.time <= scatterTime && data.seesPlayer == false)
                 {
                     ChangeState(AI_STATES.Shoot);

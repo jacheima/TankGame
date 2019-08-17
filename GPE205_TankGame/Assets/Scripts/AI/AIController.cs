@@ -36,8 +36,6 @@ public class AIController : MonoBehaviour
         Chase, Scatter, Flee, Shoot
     }
 
-
-
     void Start()
     {
         StartCoroutine(ChooseScatterWaitTime());

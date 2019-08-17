@@ -11,13 +11,6 @@ public class Spawner : MonoBehaviour
 
     public GameObject scatter;
 
-<<<<<<< HEAD
-    private void Start()
-    {
-        data = GameObject.FindGameObjectWithTag("Player").GetComponent<PawnData>();
-    }
-
-=======
     public GameManager gm;
 
     void Awake()
@@ -28,7 +21,6 @@ public class Spawner : MonoBehaviour
     {
         gm = GameManager.instance;
     }
->>>>>>> master
     public void SpawnEnemy(int shipNumber)
     {
         //Get a random way point
